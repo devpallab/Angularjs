@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" >
+    <head>
+<script type="text/javascript" src="angular.js"></script>
+<script type="text/javascript" src="custom.js"></script>
+
+    </head>
+    <body data-ng-app ="angularJSApp">
+            
+                 <div class="parent" ng-controller="myctrl">
+                        <div class="line">
+                            Name inside parent scope is: <strong>{{name}}</strong>  
+                            <input type="button" ng-click="reverseName()" value="Reverse name" />
+                        </div> 
+                        <div class="line">
+                            Color inside parent scope is: <strong style="color:{{color}}">{{color|uppercase}}</strong>  
+                            <input type="button" ng-click="randomColor()" value="Randomize color" />
+                        </div>
+                    <div class="idirective" idirective
+                        name="{{name}}"
+                        color="color"
+                        reverse1="reverseName()"
+                    ></div>
+                </div>
+            
+    </body>
+</html>
+ 
