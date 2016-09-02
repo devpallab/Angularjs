@@ -81,4 +81,21 @@ myApp.directive("panelbody",function(){
 
 
 
+myApp.directive("compliedirective",function($compile){
+
+    return {
+        restrict : "E",
+         link : function(scope,element,attr){
+                var newelement = angular.element("<button name='test' value='test' >test</button>");
+                var compileit = $compile(newelement);
+                var content = compileit(scope);
+                element.append(content);
+         },
+         template : "<div> </div>" 
+    }
+
+});
+
+
+
 
