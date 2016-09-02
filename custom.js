@@ -69,5 +69,16 @@ myApp.directive("idirective",function(){
 });
 
 
+myApp.directive("panelbody",function(){
+
+    return {
+        restrict : "E",
+         transclude: true,
+         template : "<h1 ng-transclude> </h1>" 
+    }
+
+});
+
+
 
 
