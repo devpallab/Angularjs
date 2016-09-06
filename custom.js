@@ -94,8 +94,3 @@ myApp.directive("serverDirective",function(){
         }
     }
 });
-
-
-
-
-
