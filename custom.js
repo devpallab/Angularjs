@@ -69,5 +69,33 @@ myApp.directive("idirective",function(){
 });
 
 
+myApp.directive("clientDirective",function(){
+
+    return {
+        restrict : "E",
+        scope:true,
+        link : function($scope){
+            $scope.$parent.$broadcast("message","Hi! I am client");
+        }
+    }
+});
+
+myApp.directive("serverDirective",function(){
+
+    return {
+        restrict : "E",
+         scope:true,
+        link : function($scope){
+            $scope.$on("message",function(e,msg){
+                console.log(msg);
+                $scope.msg = msg;
+            }
+            );
+        }
+    }
+});
+
+
+
 
 
